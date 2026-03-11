@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+               // Replace with your actual Public Key from the Account tab
+              emailjs.init("kEvZVB3Dx_IXae_CL"); 
+            })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NearNest | Find Your Perfect Student Home</title><meta name="title" content="NearNest | Find Your Perfect Student Home">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* NearNest App Colors */
+        .text-primary { color: #006B3E; }
+        .bg-primary { background-color: #006B3E; }
+        .border-primary { border-color: #006B3E; }
+        
+        .text-electric { color: #00E676; }
+        .bg-electric { background-color: #00E676; }
+        
+        .bg-deep-night { background-color: #002415; }
+        .text-deep-night { color: #002415; }
+        
+        .bg-mid-green { background-color: #004D2B; }
+        
+        .bg-mint { background-color: #E8F5EE; }
+        
+        .text-dark-text { color: #1A1A1A; }
+        .text-grey-text { color: #888888; }
+        .border-light-grey { border-color: #E5E7EB; }
+    </style>
+</head>
+<body class="bg-white text-dark-text font-sans antialiased overflow-x-hidden">
+
+    <nav class="bg-white shadow-sm border-b border-light-grey fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="text-3xl font-bold text-dark-text tracking-tight">Near<span class="text-primary">Nest</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                  <a href="#home" class="text-grey-text hover:text-primary font-medium transition">Home</a>
+                  <a href="index.html#features" class="text-grey-text hover:text-primary font-medium transition">Features</a>
+                  <a href="pricing.html" class="text-grey-text hover:text-primary font-medium transition">Pricing</a>
+                  <a href="#faq" class="text-grey-text hover:text-primary font-medium transition">FAQ</a>
+                  <a href="about.html" class="text-grey-text hover:text-primary font-medium transition">About Us</a>
+                  <a href="#contact" class="text-grey-text hover:text-primary font-medium transition">Contact</a>
+                  <a href="privacy.html" class="text-grey-text hover:text-primary font-medium transition">Privacy Policy</a>
+                  <a href="#" class="download-btn bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-mid-green transition shadow-md hover:shadow-lg">Get the App</a>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-grey-text hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-light-grey">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#home" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Home</a>
+                <a href="#features" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Features</a>
+                <a href="#pricing" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Pricing</a>
+                <a href="#faq" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">FAQ</a>
+                <a href="about.html" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">About Us</a>
+                <a href="#contact" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center min-h-screen bg-mint rounded-b-[4rem]">
+        <div class="md:w-1/2 text-center md:text-left md:pr-8" data-aos="fade-right" data-aos-duration="1000">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-deep-night">
+                Your Campus Life, <br>
+                <span class="text-primary">Perfectly Placed.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-grey-text mb-8 max-w-lg mx-auto md:mx-0">
+                The smartest way for college students to find verified rooms and PGs, and for owners to connect with reliable tenants.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#download" class="download-btn bg-primary text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-mid-green transition shadow-lg flex items-center justify-center">
+                    Download NearNest
+                </a>
+                <a href="#features" class="bg-white text-primary border-2 border-primary px-8 py-3 rounded-full font-bold text-lg hover:bg-mint transition flex items-center justify-center">
+                    See Features
+                </a>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 mt-16 md:mt-0 flex justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="relative w-64 h-auto shadow-2xl rounded-[3rem] border-8 border-deep-night overflow-hidden transform hover:-translate-y-2 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop" alt="NearNest App Interface" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-24 bg-white px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark-text">What We <span class="text-primary">Provide</span></h2>
+                <p class="text-grey-text max-w-2xl mx-auto text-sm md:text-base">Built to solve the specific housing challenges faced by college students and property owners.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-map-marked-alt text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-text mb-3">Map-Based Discovery</h3>
+                    <p class="text-grey-text text-sm leading-relaxed">Find rooms within 2 km of your college gate using live GPS & PostGIS queries.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-user-shield text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-text mb-3">Verified Landlords</h3>
+                    <p class="text-grey-text text-sm leading-relaxed">Every landlord submits Aadhaar & property proof. Listings go live only after admin approval.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-text mb-3">Real-Time Availability</h3>
+                    <p class="text-grey-text text-sm leading-relaxed">Landlords toggle room status instantly. Your map updates live via Supabase WebSockets.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="250">
+                    <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-text mb-3">Student-Exclusive</h3>
+                    <p class="text-grey-text text-sm leading-relaxed">Built only for college students — filter by branch, gender preference & college proximity.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-flag text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-text mb-3">Dispute Resolution</h3>
+                    <p class="text-grey-text text-sm leading-relaxed">Report fake listings or bad behaviour. Our Master Admin Console resolves every complaint.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="350">
+                    <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bullhorn text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-text mb-3">Campus Broadcasts</h3>
+                    <p class="text-grey-text text-sm leading-relaxed">Admins send targeted announcements to students or landlords across specific campuses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 bg-deep-night px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Trusted by <span class="text-electric">Students & Owners</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">See how NearNest is changing the campus living experience.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white bg-opacity-5 p-8 rounded-2xl border border-gray-700 relative" data-aos="fade-right">
+                    <i class="fas fa-quote-left text-4xl text-electric opacity-20 absolute top-6 left-6"></i>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6 relative z-10 pt-4">"I found a verified PG just 5 minutes from Government Polytechnic Nashik in just 2 days. The map feature is a lifesaver, and my parents loved that every owner is background checked!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">R</div>
+                        <div>
+                            <h4 class="text-white font-bold">Rahul S.</h4>
+                            <p class="text-electric text-sm">Final Year Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-5 p-8 rounded-2xl border border-gray-700 relative" data-aos="fade-left" data-aos-delay="100">
+                    <i class="fas fa-quote-left text-4xl text-primary opacity-30 absolute top-6 left-6"></i>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6 relative z-10 pt-4">"Before NearNest, finding reliable tenants was a hassle. Now, I update my room availability with one tap, and students contact me directly via the secure chat. Filled my rooms in a week!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-[#00897B] rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">M</div>
+                        <div>
+                            <h4 class="text-white font-bold">Mahesh P.</h4>
+                            <p class="text-[#00897B] text-sm">Property Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="faq" class="py-20 bg-white px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-deep-night">Frequently Asked <span class="text-primary">Questions</span></h2>
+                <p class="text-grey-text">Everything you need to know about using NearNest.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-lg font-bold text-dark-text mb-2"><i class="fas fa-question-circle text-primary mr-2"></i>Is the app really free for students?</h4>
+                    <p class="text-grey-text text-sm leading-relaxed">Yes! Browsing the map, filtering options, saving favorites, and chatting with landlords is 100% free for students forever.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="150">
+                    <h4 class="text-lg font-bold text-dark-text mb-2"><i class="fas fa-question-circle text-primary mr-2"></i>How are landlords verified?</h4>
+                    <p class="text-grey-text text-sm leading-relaxed">Every owner must upload their Aadhaar card and proof of property ownership. Our administrative team manually reviews and approves each listing before it appears on the map.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-lg font-bold text-dark-text mb-2"><i class="fas fa-question-circle text-primary mr-2"></i>Can I search near a specific college?</h4>
+                    <p class="text-grey-text text-sm leading-relaxed">Absolutely! NearNest uses PostGIS technology to specifically query and display rooms within a close radius (like 2km) of specific college campus gates.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="250">
+                    <h4 class="text-lg font-bold text-dark-text mb-2"><i class="fas fa-question-circle text-primary mr-2"></i>What if I spot a fake listing?</h4>
+                    <p class="text-grey-text text-sm leading-relaxed">We have a strict dispute resolution system. You can report any suspicious room or user in the app, and our Master Admin Console will investigate and suspend offenders immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-mint px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary opacity-5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-electric opacity-10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-primary font-bold tracking-widest uppercase text-sm">Contact Us</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-deep-night mt-2">Let’s Start a <span class="text-primary">Conversation</span></h2>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-1/3 space-y-6 w-full" data-aos="fade-right">
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-light-grey flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-mint rounded-2xl flex items-center justify-center text-primary text-2xl shadow-inner">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-primary uppercase tracking-wider">Email Us</p>
+                        <h4 class="text-lg font-bold text-dark-text">nearnest.2026@gmail.com</h4>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-light-grey flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-mint rounded-2xl flex items-center justify-center text-primary text-2xl shadow-inner">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-primary uppercase tracking-wider">Our Base</p>
+                        <h4 class="text-lg font-bold text-dark-text">Government Polytechnic College Nashik, Maharashtra</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-2/3 w-full" data-aos="fade-left">
+                <div class="bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-white relative min-h-[400px] flex items-center">
+                    
+<form id="contact-form" class="space-y-6 w-full transition-all duration-500 opacity-100">
+    <div class="grid md:grid-cols-2 gap-6">
+        <div class="relative">
+            <label class="text-xs font-bold text-grey-text uppercase ml-1">Full Name</label>
+            <input type="text" name="name" required class="w-full bg-mint/50 border border-light-grey rounded-2xl px-5 py-4 text-dark-text focus:outline-none focus:border-primary focus:bg-white transition" placeholder="Enter your name">
+        </div>
+        <div class="relative">
+            <label class="text-xs font-bold text-grey-text uppercase ml-1">Email Address</label>
+            <input type="email" name="email" required class="w-full bg-mint/50 border border-light-grey rounded-2xl px-5 py-4 text-dark-text focus:outline-none focus:border-primary focus:bg-white transition" placeholder="nearnest@example.com">
+        </div>
+    </div>
+    <div class="relative">
+        <label class="text-xs font-bold text-grey-text uppercase ml-1">Your Message</label>
+        <textarea name="message" required rows="4" class="w-full bg-mint/50 border border-light-grey rounded-2xl px-5 py-4 text-dark-text focus:outline-none focus:border-primary focus:bg-white transition" placeholder="Tell us how we can help you..."></textarea>
+    </div>
+    <button type="submit" class="w-full bg-primary text-white font-extrabold py-5 rounded-2xl hover:bg-mid-green transition shadow-lg flex items-center justify-center space-x-2 group">
+        <span>Send Message</span>
+        <i class="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300"></i>
+    </button>
+</form>
+
+                    <div id="success-message" class="hidden flex-col items-center justify-center text-center w-full transition-all duration-500 opacity-0 scale-95">
+                        <div class="w-20 h-20 bg-electric/20 text-primary rounded-full flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-circle-check text-5xl animate-bounce"></i>
+                        </div>
+                        <h3 class="text-3xl font-extrabold text-deep-night mb-2">Message Sent!</h3>
+                        <p class="text-grey-text text-lg">Thank you for reaching out. <br> Our team will get back to you within 24 hours.</p>
+                        <button onclick="resetForm()" class="mt-8 text-primary font-bold hover:underline">Send another message</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div id="coming-soon-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300 opacity-0">
+        <div id="modal-content" class="bg-white rounded-3xl p-8 max-w-sm w-full mx-4 transform scale-95 transition-transform duration-300 text-center shadow-2xl">
+            <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-white shadow-sm">
+                <i class="fa-solid fa-rocket text-primary text-2xl animate-bounce"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-deep-night mb-2">Almost There!</h3>
+            <p class="text-grey-text text-sm mb-6 leading-relaxed">
+                The NearNest app is currently in final testing. We will be launching on the Google Play Store very soon!
+            </p>
+            <button id="close-modal-btn" class="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-mid-green transition shadow-md">
+                Got it, thanks!
+            </button>
+        </div>
+    </div>
+
+<footer class="bg-[#0b0d0e] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-gray-900">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div data-aos="fade-up">
+            <h3 class="text-lg font-bold text-electric mb-3 tracking-tight">NearNest</h3>
+            <p class="text-gray-400 text-sm leading-snug max-w-xs">
+                Innovative solutions for student housing and property management.
+            </p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-sm font-bold text-gray-300 uppercase tracking-widest mb-4">Links</h3>
+            <ul class="grid grid-cols-2 gap-2 text-sm">
+                <li><a href="index.html#home" class="text-gray-500 hover:text-electric transition">Home</a></li>
+                <li><a href="index.html#features" class="text-gray-500 hover:text-electric transition">Features</a></li>
+                <li><a href="pricing.html" class="text-gray-500 hover:text-electric transition">Pricing</a></li>
+                <li><a href="index.html#contact" class="text-gray-500 hover:text-electric transition">Contact</a></li>
+            </ul>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-sm font-bold text-gray-300 uppercase tracking-widest mb-4">Contact</h3>
+            <ul class="space-y-2 text-sm text-gray-500">
+                <li class="flex items-center space-x-2">
+                    <i class="fa-regular fa-envelope text-electric text-xs"></i>
+                    <a href="mailto:nearnest.2026@gmail.com" class="hover:text-white transition">nearnest.2026@gmail.com</a>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-phone text-electric text-xs"></i>
+                    <span>+91 7385120059</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-location-dot text-electric text-xs"></i>
+                    <span>Nashik, Maharashtra</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-600">
+        <p>© 2026 NearNest App.</p>
+        <div class="flex space-x-4 mt-2 md:mt-0">
+            <a href="privacy.html" class="hover:text-white transition">Privacy</a>
+            <a href="about.html" class="hover:text-white transition">About</a>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({ 
+            once: true,
+            offset: 50,
+        });
+
+        // Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        // Toggle menu visibility
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+                // 3. Modal Logic for "Coming Soon"
+        const modal = document.getElementById('coming-soon-modal');
+        const modalContent = document.getElementById('modal-content');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const downloadBtns = document.querySelectorAll('.download-btn');
+
+        // Function to Open Modal
+        downloadBtns.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.classList.add('opacity-100');
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 10);
+            });
+        });
+
+        // Function to Close Modal
+        const closeModal = () => {
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }, 300);
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // --- CONTACT FORM SUCCESS LOGIC ---
+        const contactForm = document.getElementById('contact-form');
+const successMessage = document.getElementById('success-message');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const btn = this.querySelector('button');
+        btn.innerHTML = "Sending...";
+        btn.disabled = true;
+
+        // IDs from your dashboard
+        const serviceID = 'service_sy9d5og'; // Your Service ID
+        const templateID = 'template_9nu1ywo'; // Replace with your Template ID
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                // Trigger the success animation
+                contactForm.style.opacity = '0';
+                setTimeout(() => {
+                    contactForm.classList.add('hidden');
+                    successMessage.classList.remove('hidden');
+                    successMessage.classList.add('flex');
+                    setTimeout(() => {
+                        successMessage.style.opacity = '1';
+                        successMessage.classList.remove('scale-95');
+                        successMessage.classList.add('scale-100');
+                    }, 50);
+                }, 500);
+            }, (err) => {
+                btn.innerHTML = "Send Message";
+                btn.disabled = false;
+                alert("Failed to send message. Please check your IDs and try again.");
+                console.error(err);
+            });
+    });
+}
+
+// Function to reset the form if they want to send another
+function resetForm() {
+    successMessage.style.opacity = '0';
+    setTimeout(() => {
+        successMessage.classList.add('hidden');
+        successMessage.classList.remove('flex');
+        
+        contactForm.classList.remove('hidden');
+        contactForm.reset();
+        setTimeout(() => {
+            contactForm.style.opacity = '1';
+        }, 50);
+    }, 500);
+}
+
+        
+    </script>
+    
+</body>
+</html>

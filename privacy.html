@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | NearNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* NearNest App Colors */
+        .text-primary { color: #006B3E; }
+        .bg-primary { background-color: #006B3E; }
+        .border-primary { border-color: #006B3E; }
+        .text-electric { color: #00E676; }
+        .bg-electric { background-color: #00E676; }
+        .bg-deep-night { background-color: #002415; }
+        .text-deep-night { color: #002415; }
+        .bg-mid-green { background-color: #004D2B; }
+        .bg-mint { background-color: #E8F5EE; }
+        .text-dark-text { color: #1A1A1A; }
+        .text-grey-text { color: #888888; }
+        .border-light-grey { border-color: #E5E7EB; }
+    </style>
+</head>
+<body class="bg-mint text-dark-text font-sans antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-sm border-b border-light-grey fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-3xl font-bold text-dark-text tracking-tight">Near<span class="text-primary">Nest</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="index.html#home" class="text-grey-text hover:text-primary font-medium transition">Home</a>
+                    <a href="index.html#features" class="text-grey-text hover:text-primary font-medium transition">Features</a>
+                    <a href="index.html#pricing" class="text-grey-text hover:text-primary font-medium transition">Pricing</a>
+                    <a href="index.html#faq" class="text-grey-text hover:text-primary font-medium transition">FAQ</a>
+                    <a href="about.html" class="text-grey-text hover:text-primary font-medium transition">About Us</a>
+                    <a href="index.html#contact" class="text-grey-text hover:text-primary font-medium transition">Contact</a>
+                    <a href="index.html#download" class="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-mid-green transition shadow-md hover:shadow-lg">Get the App</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-grey-text hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-light-grey">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="index.html#home" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Home</a>
+                <a href="index.html#features" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Features</a>
+                <a href="index.html#pricing" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Pricing</a>
+                <a href="about.html" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">About Us</a>
+                <a href="index.html#faq" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">FAQ</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Contact</a>
+                <a href="privacy.html" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Privacy Policy</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-down" data-aos-duration="800">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-deep-night mb-4">Privacy Policy</h1>
+        <p class="text-grey-text">Last Updated: February 2026</p>
+    </section>
+
+    <section class="pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto flex-grow" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-light-grey space-y-8 text-grey-text leading-relaxed">
+            
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">1. Introduction</h2>
+                <p>Welcome to NearNest. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us at support@nearnest.in.</p>
+                <p class="mt-2">When you use our mobile application and services, you trust us with your personal information. We take your privacy very seriously, especially given our student-first approach.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">2. Information We Collect</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Personal Information:</strong> We collect names, phone numbers, email addresses, and passwords when you register as a student or property owner.</li>
+                    <li><strong>Location Data:</strong> With your permission, we utilize live GPS data to power our Map-Based Discovery (using PostGIS) to help you find rooms or PGs near specific college gates.</li>
+                    <li><strong>Verification Data:</strong> For owners, we collect Aadhaar and property proof documentation strictly for administrative verification purposes.</li>
+                    <li><strong>Communications:</strong> We securely process chat messages exchanged between users within the app to facilitate safe communication regarding room availability.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">3. How We Use Your Information</h2>
+                <p>We use personal information collected via our App for a variety of business purposes described below:</p>
+                <ul class="list-disc pl-5 mt-2 space-y-2">
+                    <li>To facilitate account creation and logon processes.</li>
+                    <li>To connect students with verified property owners securely.</li>
+                    <li>To provide real-time room availability updates via Supabase WebSockets.</li>
+                    <li>To handle dispute resolutions through our Master Admin Console.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">4. Sharing Your Information</h2>
+                <p>We only share information with your consent, to comply with laws, to provide you with services, or to protect your rights. For example, a student's basic profile may be visible to an owner when inquiring about a room, and an owner's verified property details are visible to students browsing the map.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">5. Data Security</h2>
+                <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. All user verification documents and communications are stored securely and are only accessible by authorized personnel.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">6. Contact Us</h2>
+                <p>If you have questions or comments about this notice or the NearNest platform, you may email us at:</p>
+                <p class="font-semibold text-primary mt-2"><i class="fa-regular fa-envelope mr-2"></i>nearnest.2026@gmail.com</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({ 
+            once: true,
+            offset: 50,
+        });
+
+        // Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        // Toggle menu visibility
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
