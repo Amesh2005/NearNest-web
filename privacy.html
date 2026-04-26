@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | NearNest</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -24,42 +25,66 @@
         .text-dark-text { color: #1A1A1A; }
         .text-grey-text { color: #888888; }
         .border-light-grey { border-color: #E5E7EB; }
+
+        /* Animation for mobile menu if needed */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-bounce {
+            animation: bounce 1s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="bg-mint text-dark-text font-sans antialiased overflow-x-hidden flex flex-col min-h-screen">
 
-    <nav class="bg-white shadow-sm border-b border-light-grey fixed w-full z-50 top-0 transition-all duration-300">
+    <!-- SAME HEADER AS INDEX PAGE -->
+    <nav id="main-nav" class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <a href="index.html" class="text-3xl font-bold text-dark-text tracking-tight">Near<span class="text-primary">Nest</span></a>
+            <div class="flex justify-between items-center h-16 md:h-20">
+<div class="flex items-center flex-wrap">
+    <img src="images/favicon.png" alt="NearNest Logo" class="h-14 w-auto mr-3 md:h-16">
+    <a href="#" class="text-2xl md:text-3xl font-bold text-dark-text tracking-tight group">
+        Near<span class="text-primary relative">Nest
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+        </span>
+    </a>
+</div>
+                
+                <div class="hidden md:flex items-center space-x-4 lg:space-x-6">
+                    <a href="index.html#home" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Home</a>
+                    <a href="index.html#features" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Features</a>
+                    <a href="pricing.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Pricing</a>
+                    <a href="index.html#faq" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">FAQ</a>
+                    <a href="about.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">About Us</a>
+                    <a href="contact.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Contact</a>
+                    <a href="privacy.html" class="text-primary font-medium transition duration-300 py-2 relative">
+                        Privacy
+                        <span class="absolute -bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                    </a>
+                    <a href="#" class="download-btn bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-mid-green transition-all duration-300 shadow-md hover:shadow-lg">Get the App</a>
                 </div>
-                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="index.html#home" class="text-grey-text hover:text-primary font-medium transition">Home</a>
-                    <a href="index.html#features" class="text-grey-text hover:text-primary font-medium transition">Features</a>
-                    <a href="index.html#pricing" class="text-grey-text hover:text-primary font-medium transition">Pricing</a>
-                    <a href="index.html#faq" class="text-grey-text hover:text-primary font-medium transition">FAQ</a>
-                    <a href="about.html" class="text-grey-text hover:text-primary font-medium transition">About Us</a>
-                    <a href="index.html#contact" class="text-grey-text hover:text-primary font-medium transition">Contact</a>
-                    <a href="index.html#download" class="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-mid-green transition shadow-md hover:shadow-lg">Get the App</a>
-                </div>
+                
                 <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="text-grey-text hover:text-primary focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                    <button id="mobile-menu-btn" class="text-grey-text hover:text-primary focus:outline-none w-10 h-10 rounded-lg hover:bg-mint transition-all duration-300 flex items-center justify-center">
+                        <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-light-grey">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-                <a href="index.html#home" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Home</a>
-                <a href="index.html#features" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Features</a>
-                <a href="index.html#pricing" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Pricing</a>
-                <a href="about.html" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">About Us</a>
-                <a href="index.html#faq" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">FAQ</a>
-                <a href="index.html#contact" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Contact</a>
-                <a href="privacy.html" class="block px-3 py-2 text-grey-text hover:text-primary font-medium">Privacy Policy</a>
-
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-lg">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html#home" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Home</a>
+                <a href="index.html#features" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Features</a>
+                <a href="pricing.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Pricing</a>
+                <a href="index.html#faq" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">FAQ</a>
+                <a href="about.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">About Us</a>
+                <a href="contact.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Contact</a>
+                <a href="privacy.html" class="block px-4 py-3 text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Privacy</a>
+                <div class="pt-2">
+                    <a href="#" class="download-btn block w-full text-center bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-mid-green transition-all duration-300 shadow-md">Get the App</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -127,21 +152,91 @@
         });
 
         // Mobile Menu Toggle Logic
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
         
-        // Toggle menu visibility
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
 
-        // Close mobile menu when a link is clicked
-        const mobileLinks = menu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
+        // Modal Logic for Download Button (if needed)
+        const modal = document.getElementById('coming-soon-modal');
+        const downloadBtns = document.querySelectorAll('.download-btn');
+        
+        if (!modal) {
+            const newModal = document.createElement('div');
+            newModal.id = 'coming-soon-modal';
+            newModal.className = 'fixed inset-0 z-[100] hidden items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300 opacity-0';
+            newModal.innerHTML = `
+                <div id="modal-content" class="bg-white rounded-3xl p-8 max-w-sm w-full mx-4 transform scale-95 transition-transform duration-300 text-center shadow-2xl">
+                    <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-rocket text-primary text-2xl animate-bounce"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-deep-night mb-2">Almost There!</h3>
+                    <p class="text-grey-text text-sm mb-6">The NearNest app is currently in final testing. We will be launching on the Google Play Store very soon!</p>
+                    <button id="close-modal-btn" class="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-mid-green transition shadow-md">
+                        Got it, thanks!
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(newModal);
+        }
+
+        const modalElement = document.getElementById('coming-soon-modal');
+        const modalContentElement = document.getElementById('modal-content');
+        const closeModalBtnElement = document.getElementById('close-modal-btn');
+
+        downloadBtns.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (modalElement) {
+                    modalElement.classList.remove('hidden');
+                    modalElement.classList.add('flex');
+                    setTimeout(() => {
+                        modalElement.classList.remove('opacity-0');
+                        modalElement.classList.add('opacity-100');
+                        if (modalContentElement) {
+                            modalContentElement.classList.remove('scale-95');
+                            modalContentElement.classList.add('scale-100');
+                        }
+                    }, 10);
+                }
             });
         });
+
+        const closeModal = () => {
+            if (modalElement) {
+                modalElement.classList.remove('opacity-100');
+                modalElement.classList.add('opacity-0');
+                if (modalContentElement) {
+                    modalContentElement.classList.remove('scale-100');
+                    modalContentElement.classList.add('scale-95');
+                }
+                setTimeout(() => {
+                    modalElement.classList.remove('flex');
+                    modalElement.classList.add('hidden');
+                }, 300);
+            }
+        };
+
+        if (closeModalBtnElement) closeModalBtnElement.addEventListener('click', closeModal);
+        if (modalElement) modalElement.addEventListener('click', (e) => { if (e.target === modalElement) closeModal(); });
     </script>
 </body>
 </html>

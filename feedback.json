@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1777140671248,
+    "name": "sarthak Joshi",
+    "role": "Student",
+    "rating": 2,
+    "text": "App works fine, but the chat feature sometimes lags. Hope they improve it soon.",
+    "date": "2026-04-25T18:11:11.248Z"
+  },
+  {
+    "id": 1777140634376,
+    "name": "Nehal Patel",
+    "role": "Property Owner",
+    "rating": 4,
+    "text": "Very easy to list my PG. Got genuine student inquiries within a day. The verification process is smooth",
+    "date": "2026-04-25T18:10:34.376Z"
+  },
+  {
+    "id": 1777140607667,
+    "name": "Riya Mehata",
+    "role": "Student",
+    "rating": 5,
+    "text": "The map-based search is amazing! I found a room just 800m from my college. No broker, no nonsense.",
+    "date": "2026-04-25T18:10:07.667Z"
+  },
+  {
+    "id": 1777134458721,
+    "name": "livestrike wale Nilesh bhai",
+    "role": "Property Owner",
+    "rating": 5,
+    "text": "\"Zero brokerage is real! I saved ₹15,000 compared to what brokers were asking. The chat feature is very",
+    "date": "2026-04-25T16:27:38.721Z"
+  }
+]

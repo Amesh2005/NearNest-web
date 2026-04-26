@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Feedback | NearNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .text-primary { color: #006B3E; }
+        .bg-primary { background-color: #006B3E; }
+        .border-primary { border-color: #006B3E; }
+        .text-electric { color: #00E676; }
+        .bg-electric { background-color: #00E676; }
+        .bg-mint { background-color: #E8F5EE; }
+        .text-dark-text { color: #1A1A1A; }
+        .text-grey-text { color: #666; }
+        .star-rating i { font-size: 14px; margin-right: 2px; }
+        .star-rating .fa-star, .star-rating .fa-star-half-alt { color: #fbbf24; }
+        .star-rating .fa-star-o, .star-rating .far.fa-star { color: #d1d5db; }
+        .hover-scale { transition: all 0.3s ease; }
+        .hover-scale:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-white text-dark-text font-sans antialiased">
+
+    <!-- Same header as index (simplified for consistency) -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <a href="index.html" class="text-2xl md:text-3xl font-bold text-dark-text">Near<span class="text-primary">Nest</span></a>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html#home" class="text-grey-text hover:text-primary">Home</a>
+                    <a href="index.html#features" class="text-grey-text hover:text-primary">Features</a>
+                    <a href="pricing.html" class="text-grey-text hover:text-primary">Pricing</a>
+                    <a href="index.html#faq" class="text-grey-text hover:text-primary">FAQ</a>
+                    <a href="about.html" class="text-grey-text hover:text-primary">About</a>
+                    <a href="contact.html" class="text-grey-text hover:text-primary">Contact</a>
+                    <a href="privacy.html" class="text-grey-text hover:text-primary">Privacy</a>
+                    <a href="#" class="download-btn bg-primary text-white px-4 py-2 rounded-full">Get App</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn"><i class="fa-solid fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-t py-2">
+            <div class="flex flex-col items-center space-y-2">
+                <a href="index.html#home" class="py-2">Home</a>
+                <a href="index.html#features" class="py-2">Features</a>
+                <a href="pricing.html" class="py-2">Pricing</a>
+                <a href="index.html#faq" class="py-2">FAQ</a>
+                <a href="about.html" class="py-2">About</a>
+                <a href="contact.html" class="py-2">Contact</a>
+                <a href="privacy.html" class="py-2">Privacy</a>
+                <a href="#" class="download-btn bg-primary text-white px-4 py-2 rounded-full">Get App</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 text-center bg-gradient-to-br from-mint/30 via-white to-mint/10">
+        <h1 class="text-4xl md:text-5xl font-bold text-dark-text">All User <span class="text-primary">Feedback</span></h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-electric mx-auto rounded-full mt-4"></div>
+        <p class="text-grey-text mt-4">See what our community is saying about NearNest</p>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="max-w-7xl mx-auto px-4 py-8 flex flex-wrap justify-center gap-3">
+        <button class="filter-btn active bg-primary text-white px-5 py-2 rounded-full text-sm font-medium shadow-md" data-filter="all">All Ratings</button>
+        <button class="filter-btn bg-gray-100 text-dark-text px-5 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition" data-filter="5">★★★★★ (5)</button>
+        <button class="filter-btn bg-gray-100 text-dark-text px-5 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition" data-filter="4">★★★★☆ (4+)</button>
+        <button class="filter-btn bg-gray-100 text-dark-text px-5 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition" data-filter="3">★★★☆☆ (3+)</button>
+        <button class="filter-btn bg-gray-100 text-dark-text px-5 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition" data-filter="2">★★☆☆☆ (2+)</button>
+        <button class="filter-btn bg-gray-100 text-dark-text px-5 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition" data-filter="1">★☆☆☆☆ (1+)</button>
+    </div>
+
+    <!-- *** REPLACED ADMIN TRIGGER: hidden icon (almost invisible) *** -->
+    <div class="fixed bottom-4 right-4 z-50 opacity-10 hover:opacity-100 transition-opacity duration-300">
+        <button id="adminSecretIcon" class="w-8 h-8 rounded-full bg-gray-200 text-gray-500 hover:bg-primary hover:text-white flex items-center justify-center shadow-sm">
+            <i class="fas fa-shield-alt text-sm"></i>
+        </button>
+    </div>
+
+    <!-- Admin mode indicator (hidden by default) -->
+    <div id="adminModeBar" class="hidden fixed bottom-5 right-5 bg-yellow-500 text-black px-4 py-2 rounded-full shadow-lg z-50 flex items-center gap-2 text-sm font-semibold">
+       <i class="fas fa-user-shield"></i> Admin Mode ACTIVE
+       <button id="exitAdminBtn" class="ml-2 bg-black/20 px-2 py-0.5 rounded-full text-xs">Exit</button>
+    </div>    
+
+    <!-- Feedback List -->
+    <div id="allFeedbackList" class="max-w-7xl mx-auto px-4 py-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Dynamic content will be inserted here -->
+    </div>
+
+    <!-- Submit New Feedback Section (attractive) -->
+    <div class="max-w-4xl mx-auto px-4 py-16 mb-16">
+        <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden hover-scale">
+            <div class="bg-gradient-to-r from-primary to-mid-green px-6 py-5">
+                <h3 class="text-2xl font-bold text-white">Share Your Experience</h3>
+                <p class="text-white/80 text-sm">Help us improve NearNest by leaving your feedback</p>
+            </div>
+            <form id="newFeedbackForm" class="p-6 md:p-8 space-y-5">
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-sm font-semibold text-dark-text mb-1">Your Name *</label>
+                        <input type="text" id="newName" required class="w-full border border-gray-300 rounded-xl px-4 py-2.5 focus:outline-none focus:border-primary transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-dark-text mb-1">Role</label>
+                        <select id="newRole" class="w-full border border-gray-300 rounded-xl px-4 py-2.5 focus:outline-none focus:border-primary">
+                            <option value="Student">Student</option>
+                            <option value="Property Owner">Property Owner</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-dark-text mb-1">Rating (1-5) *</label>
+                    <div class="flex gap-2 text-2xl" id="newStarSelector">
+                        <i class="far fa-star cursor-pointer hover:text-yellow-400 transition" data-val="1"></i>
+                        <i class="far fa-star cursor-pointer hover:text-yellow-400 transition" data-val="2"></i>
+                        <i class="far fa-star cursor-pointer hover:text-yellow-400 transition" data-val="3"></i>
+                        <i class="far fa-star cursor-pointer hover:text-yellow-400 transition" data-val="4"></i>
+                        <i class="far fa-star cursor-pointer hover:text-yellow-400 transition" data-val="5"></i>
+                    </div>
+                    <input type="hidden" id="newRating" value="0">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-dark-text mb-1">Your Feedback *</label>
+                    <textarea id="newText" rows="4" required class="w-full border border-gray-300 rounded-xl px-4 py-2.5 focus:outline-none focus:border-primary" placeholder="Tell us about your experience..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-mid-green transition shadow-md flex items-center justify-center gap-2">
+                    <i class="fas fa-paper-plane"></i> Submit Feedback
+                </button>
+                <div id="submitMessage" class="hidden text-center text-green-600 font-medium"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Coming Soon Modal (same as index) -->
+    <div id="coming-soon-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl p-8 max-w-sm text-center shadow-2xl">
+            <i class="fa-solid fa-rocket text-primary text-5xl animate-bounce mb-4"></i>
+            <h3 class="text-2xl font-bold mb-2">Almost There!</h3>
+            <p class="text-grey-text mb-6">The NearNest app is launching soon on Google Play Store!</p>
+            <button id="close-modal-btn" class="bg-primary text-white px-6 py-2 rounded-full">Got it</button>
+        </div>
+    </div>
+
+    <footer class="bg-[#0b0d0e] text-white py-8 text-center text-sm">
+        <p>© 2026 NearNest. Built with ❤️ by students of Government Polytechnic Nashik</p>
+    </footer>
+
+<script>
+    // ---------- FEEDBACK SYSTEM (server + localStorage fallback) ----------
+    let allFeedbacks = [];
+    let currentFilter = 'all';
+    let useServer = true;
+
+    async function loadAllFeedbacks() {
+        if (useServer) {
+            try {
+                const res = await fetch('/api/feedback');
+                if (res.ok) {
+                    allFeedbacks = await res.json();
+                    renderFilteredFeedbacks();
+                    return;
+                }
+            } catch (err) {
+                console.warn('Server not available, using localStorage');
+                useServer = false;
+            }
+        }
+        // Fallback to localStorage
+        const stored = localStorage.getItem('nearnest_feedbacks');
+        if (stored) {
+            allFeedbacks = JSON.parse(stored);
+        } else {
+            allFeedbacks = [
+                { id: 1, name: "Rahul Sharma", role: "Student", rating: 5, text: "Found a verified PG within 2km of my college in just 2 days. No brokerage, no hassle. Highly recommended!", date: new Date().toISOString() },
+                { id: 2, name: "Priya Patil", role: "Student", rating: 4.5, text: "The map feature is a lifesaver! I could see exactly which rooms were available near my college. Saved so much time.", date: new Date().toISOString() },
+                { id: 3, name: "Mahesh Patil", role: "Property Owner", rating: 5, text: "Very easy to list my rooms and connect with students. The verification process gave tenants confidence.", date: new Date().toISOString() },
+                { id: 4, name: "Sneha Joshi", role: "Student", rating: 5, text: "Zero brokerage is real! I saved ₹15,000 compared to what brokers were asking. The chat feature is very secure.", date: new Date().toISOString() }
+            ];
+            localStorage.setItem('nearnest_feedbacks', JSON.stringify(allFeedbacks));
+        }
+        renderFilteredFeedbacks();
+    }
+
+    function renderStars(rating) {
+        let fullStars = Math.floor(rating);
+        let hasHalf = rating % 1 !== 0;
+        let starsHtml = '';
+        for (let i = 0; i < fullStars; i++) starsHtml += '<i class="fas fa-star"></i>';
+        if (hasHalf) starsHtml += '<i class="fas fa-star-half-alt"></i>';
+        let emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
+        for (let i = 0; i < emptyStars; i++) starsHtml += '<i class="far fa-star"></i>';
+        return `<div class="star-rating">${starsHtml}</div>`;
+    }
+
+    function renderFilteredFeedbacks() {
+        let filtered = [...allFeedbacks];
+        if (currentFilter === '5') filtered = filtered.filter(f => f.rating >= 4.8);
+        else if (currentFilter === '4') filtered = filtered.filter(f => f.rating >= 4 && f.rating < 5);
+        else if (currentFilter === '3') filtered = filtered.filter(f => f.rating >= 3 && f.rating < 4);
+        else if (currentFilter === '2') filtered = filtered.filter(f => f.rating >= 2 && f.rating < 3);
+        else if (currentFilter === '1') filtered = filtered.filter(f => f.rating >= 1 && f.rating < 2);
+        
+        filtered.sort((a,b) => b.id - a.id);
+        const container = document.getElementById('allFeedbackList');
+        if (!container) return;
+        if (filtered.length === 0) {
+            container.innerHTML = '<div class="col-span-full text-center text-grey-text py-10">No feedback found.</div>';
+            return;
+        }
+        container.innerHTML = filtered.map(fb => `
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative">
+                ${isAdminMode ? `
+                    <button onclick="deleteFeedback(${fb.id})" class="absolute top-3 right-3 text-red-500 hover:text-red-700 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-sm transition">
+                        <i class="fas fa-trash-alt text-sm"></i>
+                    </button>
+                ` : ''}
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">${fb.name.charAt(0)}</div>
+                    <div>
+                        <div class="font-bold text-dark-text">${escapeHtml(fb.name)}</div>
+                        <div class="text-xs text-grey-text">${fb.role}</div>
+                    </div>
+                </div>
+                ${renderStars(fb.rating)}
+                <p class="text-grey-text text-sm mt-3 leading-relaxed">"${escapeHtml(fb.text)}"</p>
+                <div class="text-right text-xs text-grey-text mt-3">${new Date(fb.date).toLocaleDateString()}</div>
+            </div>
+        `).join('');
+    }
+
+    async function addNewFeedback(name, role, rating, text) {
+        const newFeedback = {
+            id: Date.now(),
+            name: name.trim(),
+            role: role,
+            rating: parseFloat(rating),
+            text: text.trim(),
+            date: new Date().toISOString()
+        };
+
+        if (useServer) {
+            try {
+                const res = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, role, rating, text })
+                });
+                if (res.ok) {
+                    const serverFb = await res.json();
+                    allFeedbacks.unshift(serverFb);
+                    renderFilteredFeedbacks();
+                    return serverFb;
+                }
+            } catch (err) {
+                console.warn('Server save failed, falling back to localStorage');
+                useServer = false;
+            }
+        }
+        // Fallback to localStorage
+        allFeedbacks.unshift(newFeedback);
+        localStorage.setItem('nearnest_feedbacks', JSON.stringify(allFeedbacks));
+        renderFilteredFeedbacks();
+        return newFeedback;
+    }
+
+    async function deleteFeedback(id) {
+        if (!isAdminMode) return;
+        if (!confirm('Delete this feedback permanently?')) return;
+        if (useServer) {
+            try {
+                const res = await fetch(`/api/feedback/${id}?pwd=admin123`, { method: 'DELETE' });
+                if (res.ok) {
+                    allFeedbacks = allFeedbacks.filter(fb => fb.id !== id);
+                    renderFilteredFeedbacks();
+                    return;
+                }
+            } catch (err) {
+                console.warn('Server delete failed, falling back to localStorage');
+            }
+        }
+        // Fallback to localStorage delete
+        allFeedbacks = allFeedbacks.filter(fb => fb.id !== id);
+        localStorage.setItem('nearnest_feedbacks', JSON.stringify(allFeedbacks));
+        renderFilteredFeedbacks();
+    }
+
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.remove('bg-primary', 'text-white');
+                b.classList.add('bg-gray-100', 'text-dark-text');
+            });
+            btn.classList.add('bg-primary', 'text-white');
+            btn.classList.remove('bg-gray-100', 'text-dark-text');
+            currentFilter = btn.getAttribute('data-filter');
+            renderFilteredFeedbacks();
+        });
+    });
+
+    // New feedback form star selector
+    const starIcons = document.querySelectorAll('#newStarSelector i');
+    let selectedRating = 0;
+    starIcons.forEach(star => {
+        star.addEventListener('click', function() {
+            const val = parseInt(this.getAttribute('data-val'));
+            selectedRating = val;
+            document.getElementById('newRating').value = val;
+            starIcons.forEach((s, idx) => {
+                if (idx < val) s.className = 'fas fa-star cursor-pointer hover:text-yellow-400 text-yellow-400';
+                else s.className = 'far fa-star cursor-pointer hover:text-yellow-400';
+            });
+        });
+    });
+
+    const newForm = document.getElementById('newFeedbackForm');
+    if (newForm) {
+        newForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('newName').value;
+            const role = document.getElementById('newRole').value;
+            const rating = document.getElementById('newRating').value;
+            const text = document.getElementById('newText').value;
+            if (!name || rating == 0 || !text) {
+                alert('Please fill all fields and select a rating.');
+                return;
+            }
+            await addNewFeedback(name, role, rating, text);
+            newForm.reset();
+            selectedRating = 0;
+            starIcons.forEach(s => s.className = 'far fa-star cursor-pointer hover:text-yellow-400');
+            document.getElementById('newRating').value = '0';
+            const msgDiv = document.getElementById('submitMessage');
+            msgDiv.innerHTML = '✅ Feedback submitted successfully! Thank you.';
+            msgDiv.classList.remove('hidden');
+            setTimeout(() => msgDiv.classList.add('hidden'), 4000);
+        });
+    }
+
+    function escapeHtml(str) {
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        });
+    }
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    // Coming soon modal logic
+    const modal = document.getElementById('coming-soon-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const downloadBtns = document.querySelectorAll('.download-btn');
+    downloadBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => modal.classList.add('opacity-100'), 10);
+        });
+    });
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.remove('opacity-100');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        });
+    }
+
+    // ---------- HIDDEN ADMIN MODE (8 rapid clicks) ----------
+    let isAdminMode = false;
+    let clickCount = 0;
+    let clickTimer = null;
+    const adminIcon = document.getElementById('adminSecretIcon');
+    const adminModeBar = document.getElementById('adminModeBar');
+    const exitAdminBtn = document.getElementById('exitAdminBtn');
+
+    if (adminIcon) {
+        adminIcon.addEventListener('click', () => {
+            if (clickTimer) clearTimeout(clickTimer);
+            clickCount++;
+            clickTimer = setTimeout(() => { clickCount = 0; }, 1000);
+            if (clickCount === 8) {
+                clickCount = 0;
+                if (clickTimer) clearTimeout(clickTimer);
+                const pwd = prompt("Enter admin password:");
+                if (pwd === "admin123") {
+                    isAdminMode = true;
+                    adminModeBar.classList.remove('hidden');
+                    renderFilteredFeedbacks();
+                } else {
+                    alert("Wrong password.");
+                }
+            }
+        });
+    }
+
+    if (exitAdminBtn) {
+        exitAdminBtn.addEventListener('click', () => {
+            isAdminMode = false;
+            adminModeBar.classList.add('hidden');
+            renderFilteredFeedbacks();
+        });
+    }
+
+    // Initialize
+    loadAllFeedbacks();
+</script>
+</body>
+</html>
