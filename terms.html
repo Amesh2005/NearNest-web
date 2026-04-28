@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | NearNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .text-primary { color: #006B3E; }
+        .bg-primary { background-color: #006B3E; }
+        .bg-mint { background-color: #E8F5EE; }
+        .text-dark-text { color: #1A1A1A; }
+        .text-grey-text { color: #888888; }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-bounce {
+            animation: bounce 1s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-mint text-dark-text font-sans antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- SAME HEADER AS OTHER PAGES -->
+    <nav id="main-nav" class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex items-center flex-wrap">
+                    <img src="images/favicon.png" alt="NearNest Logo" class="h-10 w-auto mr-2 md:h-16">
+                    <a href="index.html" class="text-xl md:text-3xl font-bold text-dark-text tracking-tight group">
+                        Near<span class="text-primary relative">Nest
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-4 lg:space-x-6">
+                    <a href="index.html#home" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Home</a>
+                    <a href="terms.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Terms</a>
+                    <a href="pricing.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Pricing</a>
+                    <a href="refund.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Refund</a>
+                    <a href="about.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">About Us</a>
+                    <a href="contact.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Contact</a>
+                    <a href="privacy.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Privacy</a>
+                    <a href="#" class="download-btn bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-mid-green transition-all duration-300 shadow-md hover:shadow-lg">Get the App</a>
+                </div>
+                
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-grey-text hover:text-primary focus:outline-none w-10 h-10 rounded-lg hover:bg-mint transition-all duration-300 flex items-center justify-center">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-lg">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html#home" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Home</a>
+                <a href="terms.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Terms</a>
+                <a href="pricing.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Pricing</a>
+                <a href="refund.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Refund</a>
+                <a href="about.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">About Us</a>
+                <a href="contact.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Contact</a>
+                <a href="privacy.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Privacy</a>
+                <div class="pt-2">
+                    <a href="#" class="download-btn block w-full text-center bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-mid-green transition-all duration-300 shadow-md">Get the App</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-down" data-aos-duration="800">
+        <div class="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 mb-4">
+            <i class="fas fa-file-contract text-sm"></i>
+            <span class="text-sm font-semibold">Legal Agreement</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-deep-night mb-4">Terms of <span class="text-primary">Service</span></h1>
+        <p class="text-grey-text max-w-2xl mx-auto">Please read these terms carefully before using the NearNest platform.</p>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-electric mx-auto rounded-full mt-4"></div>
+        <p class="text-grey-text mt-6">Last Updated: April 2026</p>
+    </section>
+
+    <!-- Terms of Service Content (with exact required clauses) -->
+    <section class="py-8 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto flex-grow" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-light-grey space-y-6 text-grey-text leading-relaxed">
+
+            <!-- CLAUSE 1: Service nature (exact wording) -->
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">1. Service Nature</h2>
+                <p>NearNest is a software platform that provides verification tools, geographic processing, and encrypted communication. We do not broker, lease, or transact any real estate.</p>
+            </div>
+
+            <!-- CLAUSE 2: User responsibility (exact wording) -->
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">2. User Responsibility</h2>
+                <p>Students and landlords are responsible for their own agreements. NearNest does not act as an agent or broker.</p>
+            </div>
+
+            <!-- CLAUSE 3: Fee for software (exact wording) -->
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">3. Fee for Software</h2>
+                <p>Any fee paid is for access to software features (verification, contact data, dashboard), not for any property transaction.</p>
+            </div>
+
+            <!-- Additional standard clauses (optional but good for completeness) -->
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">4. Verification Disclaimer</h2>
+                <p>We perform basic identity and property document checks (Aadhaar, ownership proof) as part of our verification software. However, final due diligence, site visits, rental terms, and agreement conditions are the sole responsibility of the users.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">5. Limitation of Liability</h2>
+                <p>NearNest shall not be liable for any loss, damage, dispute, or injury arising from any rental agreement, interaction, or transaction between a student and a landlord. Our software only facilitates communication and data verification. You use the platform at your own risk.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">6. Prohibited Activities</h2>
+                <p>You agree not to:</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                    <li>Use the platform for any illegal or unauthorized purpose.</li>
+                    <li>Post fake or misleading property listings.</li>
+                    <li>Harass, abuse, or spam other users.</li>
+                    <li>Attempt to bypass our verification or payment systems.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">7. Governing Law</h2>
+                <p>These terms are governed by the laws of India, and any disputes shall be subject to the exclusive jurisdiction of the courts in Nashik, Maharashtra.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-dark-text mb-4">8. Contact Us</h2>
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <p class="mt-2"><i class="fa-regular fa-envelope text-primary mr-2"></i> <span class="text-primary font-semibold">nearnest.2026@gmail.com</span></p>
+                <p><i class="fa-solid fa-phone text-primary mr-2"></i> +91 8698531533</p>
+                <p><i class="fa-solid fa-location-dot text-primary mr-2"></i> Government Polytechnic Nashik, Samangaon Road, Nashik Road, Nashik, Maharashtra – 422101</p>
+            </div>
+
+            <div class="pt-4 text-sm text-grey-text text-center border-t border-gray-100">
+                <i class="fas fa-calendar-alt text-primary mr-1"></i> Effective: April 2026
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home Button -->
+    <div class="text-center pt-8 pb-20">
+        <a href="index.html" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-mid-green transition-all duration-300 shadow-md">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+
+    <!-- Modal for Download Button -->
+    <div id="coming-soon-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300 opacity-0">
+        <div id="modal-content" class="bg-white rounded-3xl p-8 max-w-sm w-full mx-4 transform scale-95 transition-transform duration-300 text-center shadow-2xl">
+            <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-rocket text-primary text-2xl animate-bounce"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-deep-night mb-2">Almost There!</h3>
+            <p class="text-grey-text text-sm mb-6">The NearNest app is currently in final testing. We will be launching on the Google Play Store very soon!</p>
+            <button id="close-modal-btn" class="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-mid-green transition shadow-md">
+                Got it, thanks!
+            </button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50, duration: 800 });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', (e) => { e.stopPropagation(); mobileMenu.classList.toggle('hidden'); });
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+            document.addEventListener('click', (e) => { if (!mobileMenu.contains(e.target) && !mobileBtn.contains(e.target)) mobileMenu.classList.add('hidden'); });
+        }
+
+        // Modal Logic for Download Button
+        const modal = document.getElementById('coming-soon-modal');
+        const modalContent = document.getElementById('modal-content');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const downloadBtns = document.querySelectorAll('.download-btn');
+        
+        downloadBtns.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.classList.add('opacity-100');
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 10);
+            });
+        });
+        
+        const closeModal = () => {
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => { modal.classList.remove('flex'); modal.classList.add('hidden'); }, 300);
+        };
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    </script>
+</body>
+</html>
