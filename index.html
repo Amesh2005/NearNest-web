@@ -600,7 +600,7 @@
                     <i class="fas fa-map-marked-alt text-primary text-xl"></i>
                 </div>
                 <h3 class="text-lg font-bold text-dark-text mb-3">Geographic Verification Engine</h3>
-                <p class="text-grey-text text-sm leading-relaxed">Find rooms within 2 km of your college gate using live GPS & PostGIS queries.</p>
+                <p class="text-grey-text text-sm leading-relaxed">Find rooms nearn of your college gate using live GPS & PostGIS queries.</p>
             </div>
 
             <!-- Feature 2: Verified Landlords -> Verification Management System -->
@@ -919,19 +919,45 @@
         renderPreviewFeedbacks();
         renderAverageRating();
     }
-    async function addFeedback(name, role, rating, text) {
-        const newFeedback = { id: Date.now(), name: name.trim(), role, rating: parseFloat(rating), text: text.trim(), date: new Date().toISOString() };
-        if (useServer) {
-            try {
-                const res = await fetch('/api/feedback', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, role, rating, text }) });
-                if (res.ok) { allFeedbacks.unshift(await res.json()); renderPreviewFeedbacks(); renderAverageRating(); return; }
-            } catch (err) { console.warn('Server save failed, falling back to localStorage'); useServer = false; }
+async function addFeedback(name, role, rating, text) {
+    const newFeedback = {
+        id: Date.now(),
+        name: name.trim(),
+        role: role,
+        rating: parseFloat(rating),
+        text: text.trim(),
+        date: new Date().toISOString()
+    };
+
+    if (useServer) {
+        try {
+            const res = await fetch('/api/feedback', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, role, rating, text })
+            });
+            if (res.ok) {
+                const serverFeedback = await res.json();
+                allFeedbacks.unshift(serverFeedback);
+                renderPreviewFeedbacks();
+                renderAverageRating();
+                return;
+            } else {
+                throw new Error('Server responded with error');
+            }
+        } catch (err) {
+            console.warn('Server save failed, falling back to localStorage');
+            useServer = false;
+            // Fall through to localStorage fallback
         }
-        allFeedbacks.unshift(newFeedback);
-        localStorage.setItem('nearnest_feedbacks', JSON.stringify(allFeedbacks));
-        renderPreviewFeedbacks();
-        renderAverageRating();
     }
+    
+    // Fallback to localStorage
+    allFeedbacks.unshift(newFeedback);
+    localStorage.setItem('nearnest_feedbacks', JSON.stringify(allFeedbacks));
+    renderPreviewFeedbacks();
+    renderAverageRating();
+}
     function renderStarRating(rating) {
         let full = Math.floor(rating), half = rating % 1 !== 0, stars = '';
         for (let i = 0; i < full; i++) stars += '<i class="fas fa-star text-yellow-400"></i>';
@@ -964,7 +990,54 @@
     if (closeFeedbackBtn && feedbackModal) { closeFeedbackBtn.addEventListener('click', () => { feedbackModal.classList.remove('opacity-100'); setTimeout(() => feedbackModal.classList.add('hidden'), 300); }); feedbackModal.addEventListener('click', (e) => { if (e.target === feedbackModal) closeFeedbackBtn.click(); }); }
     starIcons.forEach(star => star.addEventListener('click', function() { const val = parseInt(this.getAttribute('data-val')); selectedRating = val; document.getElementById('fbRating').value = val; starIcons.forEach((s, idx) => { s.className = idx < val ? 'fas fa-star cursor-pointer hover:text-yellow-400 text-yellow-400' : 'far fa-star cursor-pointer hover:text-yellow-400'; }); }));
     const fbForm = document.getElementById('feedbackForm');
-    if (fbForm) fbForm.addEventListener('submit', async (e) => { e.preventDefault(); const name = document.getElementById('fbName').value, role = document.getElementById('fbRole').value, rating = document.getElementById('fbRating').value, text = document.getElementById('fbText').value; if (!name || rating == 0 || !text) { alert('Please fill all fields and select a rating.'); return; } await addFeedback(name, role, rating, text); fbForm.reset(); selectedRating = 0; starIcons.forEach(s => s.className = 'far fa-star cursor-pointer hover:text-yellow-400'); document.getElementById('fbRating').value = '0'; if (closeFeedbackBtn) closeFeedbackBtn.click(); alert('Thank you for your feedback!'); });
+if (fbForm) {
+    fbForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('fbName').value.trim();
+        const role = document.getElementById('fbRole').value;
+        const rating = document.getElementById('fbRating').value;
+        const text = document.getElementById('fbText').value.trim();
+        
+        if (!name || rating == 0 || !text) {
+            alert('Please fill all fields and select a rating.');
+            return;
+        }
+        
+        // Get the submit button
+        const submitBtn = fbForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        
+        // Disable button and show loading spinner
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...';
+        
+        try {
+            await addFeedback(name, role, rating, text);
+            
+            // Reset form on success
+            fbForm.reset();
+            selectedRating = 0;
+            starIcons.forEach(s => s.className = 'far fa-star cursor-pointer hover:text-yellow-400');
+            document.getElementById('fbRating').value = '0';
+            
+            // Close modal
+            if (closeFeedbackBtn) closeFeedbackBtn.click();
+            
+            // Show success message (optional)
+            alert('Thank you for your feedback!');
+            
+        } catch (error) {
+            console.error('Feedback submission failed:', error);
+            alert('Something went wrong. Please try again later.');
+        } finally {
+            // Re-enable button and restore text (only if modal wasn't closed)
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }
+    });
+}
     loadFeedbacks();
 </script>
 
