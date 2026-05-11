@@ -86,6 +86,22 @@
         .counter {
             transition: all 0.5s ease-out;
         }
+
+        /* ===== FIXES FOR MOBILE VIEW ===== */
+        /* Ensure mobile menu button is always visible */
+        #mobile-menu-btn {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Prevent horizontal overflow causing white gap */
+        body, .hero-bg, section, .max-w-7xl {
+            overflow-x: hidden;
+        }
+        /* Remove any hidden overflow on the hero section */
+        .hero-bg, .relative {
+            overflow-x: hidden;
+        }
     </style>
 </head>
 <body class="bg-white text-dark-text font-sans antialiased overflow-x-hidden">
@@ -130,8 +146,8 @@
             <a href="terms.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Terms</a>
             <a href="pricing.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Pricing</a>
             <a href="refund.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Refund</a>
-            <a href="about.html" class="block px-4 py-3 text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">About Us</a>
-            <a href="contact.html" class="text-grey-text hover:text-primary font-medium transition duration-300 py-2">Contact</a>
+            <a href="about.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">About Us</a>
+            <a href="contact.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Contact</a>
             <a href="privacy.html" class="block px-4 py-3 text-grey-text hover:text-primary hover:bg-mint rounded-xl font-medium transition-all duration-300">Privacy</a>
             <div class="pt-2">
                 <a href="#" class="download-btn block w-full text-center bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-mid-green transition-all duration-300 shadow-md">Get the App</a>

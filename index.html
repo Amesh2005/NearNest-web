@@ -19,7 +19,6 @@
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
    <style>
-      /* ... (all existing styles unchanged) ... */
       html { scroll-behavior: smooth; }
       
       .text-primary { color: #006B3E; }
@@ -157,6 +156,22 @@
       }
       .star-rating .fa-star-o {
          color: #d1d5db;
+      }
+
+      /* ===== FIXES FOR MOBILE VIEW ===== */
+      /* Ensure mobile menu button is always visible */
+      #mobile-menu-btn {
+         display: flex !important;
+         align-items: center;
+         justify-content: center;
+      }
+      /* Prevent horizontal overflow causing white gap */
+      body, .hero-bg, section, .max-w-7xl {
+         overflow-x: hidden;
+      }
+      /* Remove any hidden overflow on the hero section */
+      #home {
+         overflow-x: hidden;
       }
       
    </style>
@@ -664,10 +679,10 @@
                 <i class="fas fa-quote-left text-4xl text-electric opacity-20 absolute top-6 left-6"></i>
                 <p class="text-gray-300 text-lg leading-relaxed mb-6 relative z-10 pt-4">"I found a verified PG just 5 minutes from Government Polytechnic Nashik in just 2 days. The geographic verification engine is a lifesaver!"</p>
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">R</div>
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">N</div>
                     <div>
-                        <h4 class="text-white font-bold">Rahul S.</h4>
-                        <p class="text-electric text-sm">Final Year Student</p>
+                        <h4 class="text-white font-bold">Nilesh Sonawane</h4>
+                        <p class="text-electric text-sm">Founder of Livestrike</p>
                     </div>
                 </div>
             </div>
@@ -678,8 +693,9 @@
                 <div class="flex items-center">
                     <div class="w-12 h-12 bg-[#00897B] rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">M</div>
                     <div>
-                        <h4 class="text-white font-bold">Mahesh P.</h4>
+                        <h4 class="text-white font-bold">Dynashwar Tanjanpure</h4>
                         <p class="text-[#00897B] text-sm">Property Owner</p>
+                        <p class="text-[#FFA500] text-sm">-Nashik</p>
                     </div>
                 </div>
             </div>
@@ -815,7 +831,7 @@
             <h3 class="text-2xl font-bold text-electric mb-3">Near<span class="text-white">Nest</span></h3>
             <p class="text-gray-400 text-sm">Innovative solutions for student housing and property management.</p>
             <div class="flex space-x-4 mt-4">
-                <a href="https://www.instagram.com/nearnest_2026/" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/nearnest_org/" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fab fa-linkedin-in"></i></a>
             </div>
@@ -840,7 +856,7 @@
             <h3 class="text-sm font-bold text-gray-300 uppercase tracking-widest mb-4">Contact Info</h3>
             <ul class="space-y-2 text-sm text-gray-500">
                 <li class="flex items-center gap-2"><i class="fa-regular fa-envelope text-electric"></i> nearnest.2026@gmail.com</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-electric"></i> +91 8698531533</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-electric"></i> +91 7385120059</li>
                 <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-electric">
                 </i>Government Polytechnic Nashik,samangaon Road,Nashik Road,Nashik,
                     Maharashtra-422101</li>
