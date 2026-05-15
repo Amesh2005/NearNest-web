@@ -8,7 +8,7 @@ const PORT = 3000;
 
 app.use(cors());
 app.use(express.json());
-// Serve static files (HTML, CSS, JS, images) from current directory
+// Serve static files (HTML, CSS, JS) from current directory
 app.use(express.static(__dirname));
 
 const FEEDBACK_FILE = path.join(__dirname, 'feedback.json');
@@ -17,12 +17,10 @@ const FEEDBACK_FILE = path.join(__dirname, 'feedback.json');
 function readFeedback() {
     try {
         if (!fs.existsSync(FEEDBACK_FILE)) {
-            const initial = [
-            
-            ];
-            fs.writeFileSync(FEEDBACK_FILE, JSON.stringify(initial, null, 2));
-            console.log("Created feedback.json with sample data.");
-            return initial;
+            // Create empty feedback file (no sample data)
+            fs.writeFileSync(FEEDBACK_FILE, JSON.stringify([], null, 2));
+            console.log("Created empty feedback.json");
+            return [];
         }
         const data = fs.readFileSync(FEEDBACK_FILE, 'utf8');
         return JSON.parse(data);
@@ -80,6 +78,7 @@ app.delete('/api/feedback/:id', (req, res) => {
     writeFeedback(newFeedback);
     res.json({ success: true });
 });
+
 // ---------- START SERVER ----------
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
