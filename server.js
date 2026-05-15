@@ -18,10 +18,7 @@ function readFeedback() {
     try {
         if (!fs.existsSync(FEEDBACK_FILE)) {
             const initial = [
-                { id: 1, name: "Rahul Sharma", role: "Student", rating: 5, text: "Found a verified PG within 2km of my college in just 2 days. No brokerage, no hassle. Highly recommended!", date: new Date().toISOString() },
-                { id: 2, name: "Priya Patil", role: "Student", rating: 4.5, text: "The map feature is a lifesaver! I could see exactly which rooms were available near my college. Saved so much time.", date: new Date().toISOString() },
-                { id: 3, name: "Mahesh Patil", role: "Property Owner", rating: 5, text: "Very easy to list my rooms and connect with students. The verification process gave tenants confidence.", date: new Date().toISOString() },
-                { id: 4, name: "Sneha Joshi", role: "Student", rating: 5, text: "Zero brokerage is real! I saved ₹15,000 compared to what brokers were asking. The chat feature is very secure.", date: new Date().toISOString() }
+            
             ];
             fs.writeFileSync(FEEDBACK_FILE, JSON.stringify(initial, null, 2));
             console.log("Created feedback.json with sample data.");
