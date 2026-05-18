@@ -9,7 +9,6 @@
    </script>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- Updated meta tags for SaaS classification -->
    <title>NearNest | Student Housing SaaS & Verification Platform</title>
    <meta name="title" content="NearNest | Advanced Student Housing Management &amp; Verification Tool">
    <meta name="description" content="Empowering students with verified data, geographic verification, and secure communication tools for campus living. Zero platform fee, 100% verified.">
@@ -19,7 +18,6 @@
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
    <style>
-      /* ... (all existing styles unchanged) ... */
       html { scroll-behavior: smooth; }
       
       .text-primary { color: #006B3E; }
@@ -142,23 +140,6 @@
       
       .floating-card { animation: float 3s ease-in-out infinite; }
       .floating-card-delayed { animation: float 4s ease-in-out infinite 1s; }
-      
-      /* Star rating style */
-      .star-rating {
-         display: inline-flex;
-         gap: 4px;
-      }
-      .star-rating i {
-         font-size: 14px;
-      }
-      .star-rating .fa-star,
-      .star-rating .fa-star-half-alt {
-         color: #fbbf24;
-      }
-      .star-rating .fa-star-o {
-         color: #d1d5db;
-      }
-      
    </style>
 </head>
 <body class="bg-white text-dark-text font-sans antialiased overflow-x-hidden">
@@ -209,7 +190,7 @@
     </div>
 </nav>
 
-<!-- HOME SECTION (updated for Razorpay SaaS classification) -->
+<!-- HOME SECTION -->
 <section id="home" class="relative min-h-screen overflow-hidden">
     <div class="hero-bg absolute inset-0"></div>
     
@@ -237,7 +218,6 @@
                     <span class="text-gradient">Perfectly Placed.</span>
                 </h1>
                 
-                <!-- Updated hero paragraph: removed "brokerage", added SaaS positioning -->
                 <p class="text-lg md:text-xl text-white/90 mb-8 max-w-lg mx-auto lg:mx-0" style="animation: slideInLeft 0.8s ease-out 0.4s both;">
                     Advanced student housing management & verification platform. Empowering students with verified data, geographic tools, and secure communication for campus living. <strong class="text-electric">Zero platform fee</strong>, 100% verified.
                 </p>
@@ -254,36 +234,24 @@
                     </a>
                 </div>
                 
-                <!-- Stat cards: "Brokerage Fees" changed to "Platform Fees" -->
-                <div class="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0" style="animation: slideInLeft 0.8s ease-out 0.8s both;">
-                    <div class="stat-card rounded-2xl p-3 text-center">
-                        <div class="text-2xl md:text-3xl font-bold text-electric">247+</div>
-                        <div class="text-white/70 text-xs md:text-sm">Verified Rooms</div>
-                    </div>
-                    <div class="stat-card rounded-2xl p-3 text-center">
-                        <div class="text-2xl md:text-3xl font-bold text-electric">₹0</div>
-                        <div class="text-white/70 text-xs md:text-sm">Platform Fees</div>
-                    </div>
-                    <div class="stat-card rounded-2xl p-3 text-center">
-                        <div class="text-2xl md:text-3xl font-bold text-electric">42+</div>
-                        <div class="text-white/70 text-xs md:text-sm">Verified Owners</div>
-                    </div>
-                </div>
-                
-                <div class="flex items-center justify-center lg:justify-start gap-4 mt-8 pt-4 border-t border-white/20" style="animation: slideInLeft 0.8s ease-out 1s both;">
-                    <div class="flex -space-x-2">
-                        <div class="w-10 h-10 rounded-full bg-primary border-2 border-white flex items-center justify-center text-white font-bold">R</div>
-                        <div class="w-10 h-10 rounded-full bg-electric border-2 border-white flex items-center justify-center text-deep-night font-bold">P</div>
-                        <div class="w-10 h-10 rounded-full bg-mid-green border-2 border-white flex items-center justify-center text-white font-bold">S</div>
-                        <div class="w-10 h-10 rounded-full bg-white/20 backdrop-blur border-2 border-white flex items-center justify-center text-white text-sm">+</div>
-                    </div>
-                    <div class="text-white/80 text-sm">
-                        <span class="font-bold text-white">200+ Students</span> already trust NearNest
-                    </div>
-                </div>
+<div class="max-w-md mx-auto lg:mx-0 text-center" style="animation: slideInLeft 0.8s ease-out 0.8s both;">
+    <div class="stat-card rounded-2xl p-6 text-center">
+        <i class="fas fa-chart-line text-electric text-3xl mb-3"></i>
+        <div class="text-2xl md:text-3xl font-bold text-electric mb-2">Coming Soon</div>
+        <div class="text-white/70 text-sm">Real‑time statistics will appear here after launch</div>
+    </div>
+</div>
+
+<div class="flex items-center justify-center lg:justify-start gap-4 mt-8 pt-4 border-t border-white/20" style="animation: slideInLeft 0.8s ease-out 1s both;">
+    <div class="w-10 h-10 rounded-full bg-primary/30 border border-white/30 flex items-center justify-center">
+        <i class="fas fa-clock text-electric text-sm"></i>
+    </div>
+    <div class="text-white/80 text-sm">
+        <span class="font-bold text-white">Stats & community data</span> will be updated soon
+    </div>
+</div>
             </div>
             
-            <!-- Mobile Phone Mockup (unchanged) -->
             <div class="relative flex justify-center" style="animation: slideInRight 0.8s ease-out 0.4s both;">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-electric/10 blur-3xl animate-pulse-slow"></div>
@@ -312,7 +280,7 @@
     </div>
 </section>
 
-<!-- WORKFLOW SECTION (only step 5 wording changed: "brokerage" -> "platform fees") -->
+<!-- WORKFLOW SECTION -->
 <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-mint/10 relative overflow-hidden">
     <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-electric/5 rounded-full blur-3xl"></div>
@@ -338,35 +306,30 @@
                 <h3 class="text-2xl font-bold text-dark-text">Student Journey – <span class="text-primary">Finding a Home</span></h3>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-                <!-- Step 1 (unchanged) -->
                 <div class="bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center group">
                     <div class="w-12 h-12 bg-mint rounded-full flex items-center justify-center mx-auto mb-3 text-primary font-bold text-lg group-hover:bg-primary group-hover:text-white transition">1</div>
                     <i class="fas fa-map-marked-alt text-primary text-3xl mb-3 inline-block"></i>
                     <h4 class="font-bold text-dark-text mb-2">Geographic Verification Engine</h4>
                     <p class="text-grey-text text-xs">See all available rooms registered for your college across Nashik with precise distance calculations.</p>
                 </div>
-                <!-- Step 2 (unchanged) -->
                 <div class="bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center group">
                     <div class="w-12 h-12 bg-mint rounded-full flex items-center justify-center mx-auto mb-3 text-primary font-bold text-lg group-hover:bg-primary group-hover:text-white transition">2</div>
                     <i class="fas fa-sliders-h text-primary text-3xl mb-3 inline-block"></i>
                     <h4 class="font-bold text-dark-text mb-2">Filter & Compare</h4>
                     <p class="text-grey-text text-xs">Gender preference, budget, branch – find your perfect match.</p>
                 </div>
-                <!-- Step 3 (unchanged) -->
                 <div class="bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center group">
                     <div class="w-12 h-12 bg-mint rounded-full flex items-center justify-center mx-auto mb-3 text-primary font-bold text-lg group-hover:bg-primary group-hover:text-white transition">3</div>
                     <i class="fas fa-check-circle text-primary text-3xl mb-3 inline-block"></i>
                     <h4 class="font-bold text-dark-text mb-2">Verify & Trust</h4>
                     <p class="text-grey-text text-xs">“NearNest Verified” badge – physically visited by our team.</p>
                 </div>
-                <!-- Step 4 (unchanged) -->
                 <div class="bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center group">
                     <div class="w-12 h-12 bg-mint rounded-full flex items-center justify-center mx-auto mb-3 text-primary font-bold text-lg group-hover:bg-primary group-hover:text-white transition">4</div>
                     <i class="fas fa-comments text-primary text-3xl mb-3 inline-block"></i>
                     <h4 class="font-bold text-dark-text mb-2">Encrypted Communication Interface</h4>
                     <p class="text-grey-text text-xs">Chat directly with landlord – no hidden charges, secure messaging.</p>
                 </div>
-                <!-- Step 5 (changed: "brokerage" -> "platform fees") -->
                 <div class="bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center group">
                     <div class="w-12 h-12 bg-mint rounded-full flex items-center justify-center mx-auto mb-3 text-primary font-bold text-lg group-hover:bg-primary group-hover:text-white transition">5</div>
                     <i class="fas fa-home text-primary text-3xl mb-3 inline-block"></i>
@@ -376,7 +339,7 @@
             </div>
         </div>
 
-        <!-- Landlord Journey (unchanged) -->
+        <!-- Landlord Journey -->
         <div class="mb-20" data-aos="fade-up" data-aos-delay="100">
             <div class="flex items-center gap-3 mb-8">
                 <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
@@ -385,7 +348,6 @@
                 <h3 class="text-2xl font-bold text-dark-text">Landlord Journey – <span class="text-primary">Listing a Property</span></h3>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-                <!-- (all landlord steps unchanged) -->
                 <div class="bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center group">
                     <div class="w-12 h-12 bg-mint rounded-full flex items-center justify-center mx-auto mb-3 text-primary font-bold text-lg group-hover:bg-primary group-hover:text-white transition">1</div>
                     <i class="fas fa-file-alt text-primary text-3xl mb-3 inline-block"></i>
@@ -419,7 +381,7 @@
             </div>
         </div>
 
-        <!-- Technology Workflow (unchanged) -->
+        <!-- Technology Workflow -->
         <div data-aos="fade-up" data-aos-delay="200">
             <div class="flex items-center gap-3 mb-8">
                 <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
@@ -461,7 +423,7 @@
     </div>
 </section>
 
-<!-- Why NearNest Section (keywords updated for Razorpay) -->
+<!-- Why NearNest Section -->
 <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12" data-aos="fade-up">
@@ -472,7 +434,6 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Card 1 (unchanged) -->
             <div class="group bg-white p-6 rounded-2xl border border-light-grey shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
@@ -489,7 +450,6 @@
                 </div>
             </div>
 
-            <!-- Card 2 (unchanged) -->
             <div class="group bg-white p-6 rounded-2xl border border-light-grey shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="150">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
@@ -506,7 +466,6 @@
                 </div>
             </div>
 
-            <!-- Card 3: Zero Platform Fee (was Zero Brokerage) - updated -->
             <div class="group bg-white p-6 rounded-2xl border border-light-grey shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
@@ -523,7 +482,6 @@
                 </div>
             </div>
 
-            <!-- Card 4 (unchanged) -->
             <div class="group bg-white p-6 rounded-2xl border border-light-grey shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="250">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
@@ -540,7 +498,6 @@
                 </div>
             </div>
 
-            <!-- Card 5 (unchanged) -->
             <div class="group bg-white p-6 rounded-2xl border border-light-grey shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
@@ -557,7 +514,6 @@
                 </div>
             </div>
 
-            <!-- Card 6 (unchanged) -->
             <div class="group bg-white p-6 rounded-2xl border border-light-grey shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="350">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
@@ -575,7 +531,6 @@
             </div>
         </div>
 
-        <!-- Bottom CTA (unchanged) -->
         <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
             <a href="#" class="download-btn inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-mid-green transition-all duration-300 shadow-lg hover:shadow-xl">
                 <span>Join NearNest Today</span>
@@ -585,7 +540,7 @@
     </div>
 </section>
 
-<!-- Features Section (updated feature names for SaaS) -->
+<!-- Features Section -->
 <section id="features" class="py-24 bg-white px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16" data-aos="fade-up">
@@ -594,16 +549,14 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <!-- Feature 1: Map-Based Discovery -> Geographic Verification Engine -->
             <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
                 <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
                     <i class="fas fa-map-marked-alt text-primary text-xl"></i>
                 </div>
                 <h3 class="text-lg font-bold text-dark-text mb-3">Geographic Verification Engine</h3>
-                <p class="text-grey-text text-sm leading-relaxed">Find rooms nearn of your college gate using live GPS & PostGIS queries.</p>
+                <p class="text-grey-text text-sm leading-relaxed">Find rooms near your college gate using live GPS & PostGIS queries.</p>
             </div>
 
-            <!-- Feature 2: Verified Landlords -> Verification Management System -->
             <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="150">
                 <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
                     <i class="fas fa-user-shield text-primary text-xl"></i>
@@ -612,7 +565,6 @@
                 <p class="text-grey-text text-sm leading-relaxed">Every landlord submits Aadhaar & property proof. Listings go live only after admin approval.</p>
             </div>
 
-            <!-- Feature 3: Real-Time Availability (unchanged – already software-focused) -->
             <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
                 <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
                     <i class="fas fa-bolt text-primary text-xl"></i>
@@ -621,7 +573,6 @@
                 <p class="text-grey-text text-sm leading-relaxed">Landlords toggle room status instantly. Your map updates live via Supabase WebSockets.</p>
             </div>
 
-            <!-- Feature 4: Student-Exclusive (unchanged) -->
             <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="250">
                 <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
                     <i class="fas fa-graduation-cap text-primary text-xl"></i>
@@ -630,7 +581,6 @@
                 <p class="text-grey-text text-sm leading-relaxed">Built only for college students — filter by branch, gender preference & college proximity.</p>
             </div>
 
-            <!-- Feature 5: Dispute Resolution (unchanged) -->
             <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
                 <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
                     <i class="fas fa-flag text-primary text-xl"></i>
@@ -639,7 +589,6 @@
                 <p class="text-grey-text text-sm leading-relaxed">Report fake listings or bad behaviour. Our Master Admin Console resolves every complaint.</p>
             </div>
 
-            <!-- Feature 6: Campus Broadcasts (unchanged) -->
             <div class="bg-white p-8 rounded-2xl border border-light-grey hover:shadow-xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="350">
                 <div class="w-12 h-12 bg-mint rounded-xl flex items-center justify-center mb-6">
                     <i class="fas fa-bullhorn text-primary text-xl"></i>
@@ -651,7 +600,7 @@
     </div>
 </section>
 
-<!-- Testimonials Section (unchanged) -->
+<!-- Testimonials Section -->
 <section id="testimonials" class="py-20 bg-deep-night px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16" data-aos="fade-up">
@@ -688,7 +637,7 @@
     </div>
 </section>
 
-<!-- FAQ Section (unchanged) -->
+<!-- FAQ Section -->
 <section id="faq" class="py-20 bg-white px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto">
         <div class="text-center mb-16" data-aos="fade-up">
@@ -727,75 +676,7 @@
     </div>
 </section>
 
-<!-- FEEDBACK SECTION (complete, unchanged) -->
-<section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-mint/20 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-electric/5 rounded-full blur-3xl"></div>
-    
-    <div class="max-w-7xl mx-auto relative z-10">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <div class="inline-block mb-3">
-                <span class="bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full">⭐ Student Feedback</span>
-            </div>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-text">What Our <span class="text-primary">Users Say</span></h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-primary to-electric mx-auto rounded-full mt-4 mb-4"></div>
-            <p class="text-grey-text max-w-2xl mx-auto text-base">Real ratings from students and landlords who found their perfect match</p>
-        </div>
-        
-        <div class="flex justify-center mb-10" id="avgRatingContainer"></div>
-        <div id="feedbackPreview" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-        
-        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-12" data-aos="fade-up" data-aos-delay="600">
-            <a href="feedback.html" class="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-mid-green transition shadow-md">
-                <i class="fas fa-list-ul"></i> View All Feedback
-            </a>
-            <button id="openFeedbackModalBtn" class="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition shadow-md">
-                <i class="fas fa-pen-alt"></i> Submit Your Feedback
-            </button>
-        </div>
-    </div>
-</section>
-
-<!-- Feedback Modal (unchanged) -->
-<div id="feedbackModal" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/60 backdrop-blur-sm transition-all duration-300">
-    <div class="bg-white rounded-2xl max-w-md w-full mx-4 p-6 shadow-2xl transform transition-all">
-        <div class="flex justify-between items-center mb-4">
-            <h3 class="text-2xl font-bold text-dark-text">Share Your Experience</h3>
-            <button id="closeModalBtn" class="text-grey-text hover:text-primary text-2xl">&times;</button>
-        </div>
-        <form id="feedbackForm">
-            <div class="mb-4">
-                <label class="block text-sm font-semibold text-dark-text mb-1">Your Name</label>
-                <input type="text" id="fbName" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-primary">
-            </div>
-            <div class="mb-4">
-                <label class="block text-sm font-semibold text-dark-text mb-1">Role</label>
-                <select id="fbRole" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-primary">
-                    <option value="Student">Student</option>
-                    <option value="Property Owner">Property Owner</option>
-                </select>
-            </div>
-            <div class="mb-4">
-                <label class="block text-sm font-semibold text-dark-text mb-1">Rating (1-5)</label>
-                <div class="flex gap-2 text-2xl" id="starSelector">
-                    <i class="far fa-star cursor-pointer hover:text-yellow-400" data-val="1"></i>
-                    <i class="far fa-star cursor-pointer hover:text-yellow-400" data-val="2"></i>
-                    <i class="far fa-star cursor-pointer hover:text-yellow-400" data-val="3"></i>
-                    <i class="far fa-star cursor-pointer hover:text-yellow-400" data-val="4"></i>
-                    <i class="far fa-star cursor-pointer hover:text-yellow-400" data-val="5"></i>
-                </div>
-                <input type="hidden" id="fbRating" value="0">
-            </div>
-            <div class="mb-4">
-                <label class="block text-sm font-semibold text-dark-text mb-1">Your Feedback</label>
-                <textarea id="fbText" rows="3" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-primary" placeholder="Tell us about your experience..."></textarea>
-            </div>
-            <button type="submit" class="w-full bg-primary text-white font-bold py-2 rounded-lg hover:bg-mid-green transition">Submit Feedback</button>
-        </form>
-    </div>
-</div>
-
-<!-- Coming Soon Modal (unchanged) -->
+<!-- Coming Soon Modal -->
 <div id="coming-soon-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300 opacity-0">
     <div id="modal-content" class="bg-white rounded-3xl p-8 max-w-sm w-full mx-4 transform scale-95 transition-transform duration-300 text-center shadow-2xl">
         <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
@@ -809,7 +690,7 @@
     </div>
 </div>
 
-<!-- Footer (updated legal links to point to proper pages - ensure these pages exist) -->
+<!-- Footer -->
 <footer class="bg-[#0b0d0e] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-gray-900">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <div data-aos="fade-up">
@@ -855,7 +736,6 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    // (All JavaScript remains exactly as in the original – no changes to functionality)
     AOS.init({ once: true, offset: 50, duration: 800 });
 
     const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -870,6 +750,7 @@
     const modalContent = document.getElementById('modal-content');
     const closeModalBtn = document.getElementById('close-modal-btn');
     const downloadBtns = document.querySelectorAll('.download-btn');
+
     downloadBtns.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
@@ -883,6 +764,7 @@
             }, 10);
         });
     });
+
     const closeModal = () => {
         comingSoonModal.classList.remove('opacity-100');
         comingSoonModal.classList.add('opacity-0');
@@ -892,153 +774,6 @@
     };
     closeModalBtn.addEventListener('click', closeModal);
     comingSoonModal.addEventListener('click', (e) => { if (e.target === comingSoonModal) closeModal(); });
-
-    let allFeedbacks = [];
-    let useServer = true;
-    async function loadFeedbacks() {
-        if (useServer) {
-            try {
-                const res = await fetch('/api/feedback');
-                if (res.ok) {
-                    allFeedbacks = await res.json();
-                    renderPreviewFeedbacks();
-                    renderAverageRating();
-                    return;
-                }
-            } catch (err) { console.warn('Server not available, using localStorage fallback'); useServer = false; }
-        }
-
-        const stored = localStorage.getItem('nearnest_feedbacks');
-if (stored) {
-    allFeedbacks = JSON.parse(stored);
-} else {
-    // ✅ Start with an empty array – no automatic samples
-    allFeedbacks = [];
-    localStorage.setItem('nearnest_feedbacks', JSON.stringify(allFeedbacks));
-}
-        renderPreviewFeedbacks();
-        renderAverageRating();
-    }
-async function addFeedback(name, role, rating, text) {
-    const newFeedback = {
-        id: Date.now(),
-        name: name.trim(),
-        role: role,
-        rating: parseFloat(rating),
-        text: text.trim(),
-        date: new Date().toISOString()
-    };
-
-    if (useServer) {
-        try {
-            const res = await fetch('/api/feedback', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, role, rating, text })
-            });
-            if (res.ok) {
-                const serverFeedback = await res.json();
-                allFeedbacks.unshift(serverFeedback);
-                renderPreviewFeedbacks();
-                renderAverageRating();
-                return;
-            } else {
-                throw new Error('Server responded with error');
-            }
-        } catch (err) {
-            console.warn('Server save failed, falling back to localStorage');
-            useServer = false;
-            // Fall through to localStorage fallback
-        }
-    }
-    
-    // Fallback to localStorage
-    allFeedbacks.unshift(newFeedback);
-    localStorage.setItem('nearnest_feedbacks', JSON.stringify(allFeedbacks));
-    renderPreviewFeedbacks();
-    renderAverageRating();
-}
-    function renderStarRating(rating) {
-        let full = Math.floor(rating), half = rating % 1 !== 0, stars = '';
-        for (let i = 0; i < full; i++) stars += '<i class="fas fa-star text-yellow-400"></i>';
-        if (half) stars += '<i class="fas fa-star-half-alt text-yellow-400"></i>';
-        let remaining = 5 - (full + (half ? 1 : 0));
-        for (let i = 0; i < remaining; i++) stars += '<i class="far fa-star text-gray-300"></i>';
-        return stars;
-    }
-    function renderPreviewFeedbacks() {
-        const container = document.getElementById('feedbackPreview');
-        if (!container) return;
-        const preview = allFeedbacks.slice(0, 5);
-        if (preview.length === 0) { container.innerHTML = '<div class="col-span-full text-center text-grey-text">No feedback yet. Be the first to share!</div>'; return; }
-        container.innerHTML = preview.map(fb => `<div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-            <div class="flex items-center gap-3 mb-4"><div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">${fb.name.charAt(0)}</div><div><h4 class="font-bold text-dark-text">${escapeHtml(fb.name)}</h4><p class="text-grey-text text-xs">${escapeHtml(fb.role)}</p></div></div>
-            <div class="star-rating mb-3">${renderStarRating(fb.rating)}</div><p class="text-grey-text text-sm leading-relaxed">"${escapeHtml(fb.text)}"</p></div>`).join('');
-    }
-    function renderAverageRating() {
-        const container = document.getElementById('avgRatingContainer');
-        if (!container) return;
-        if (allFeedbacks.length === 0) { container.innerHTML = '<div class="bg-white rounded-full shadow-md px-6 py-3">No ratings yet</div>'; return; }
-        const total = allFeedbacks.reduce((sum, fb) => sum + fb.rating, 0);
-        const avg = (total / allFeedbacks.length).toFixed(1);
-        container.innerHTML = `<div class="inline-flex items-center gap-2 bg-white rounded-full shadow-md px-6 py-3"><div class="flex items-center gap-1">${renderStarRating(parseFloat(avg))}</div><span class="text-dark-text font-semibold ml-2">${avg}/5</span><span class="text-grey-text text-sm ml-2">based on ${allFeedbacks.length} reviews</span></div>`;
-    }
-    function escapeHtml(str) { return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;'); }
-    const feedbackModal = document.getElementById('feedbackModal'), openFeedbackBtn = document.getElementById('openFeedbackModalBtn'), closeFeedbackBtn = document.getElementById('closeModalBtn'), starIcons = document.querySelectorAll('#starSelector i');
-    let selectedRating = 0;
-    if (openFeedbackBtn && feedbackModal) openFeedbackBtn.addEventListener('click', () => { feedbackModal.classList.remove('hidden'); feedbackModal.classList.add('flex'); setTimeout(() => feedbackModal.classList.add('opacity-100'), 10); });
-    if (closeFeedbackBtn && feedbackModal) { closeFeedbackBtn.addEventListener('click', () => { feedbackModal.classList.remove('opacity-100'); setTimeout(() => feedbackModal.classList.add('hidden'), 300); }); feedbackModal.addEventListener('click', (e) => { if (e.target === feedbackModal) closeFeedbackBtn.click(); }); }
-    starIcons.forEach(star => star.addEventListener('click', function() { const val = parseInt(this.getAttribute('data-val')); selectedRating = val; document.getElementById('fbRating').value = val; starIcons.forEach((s, idx) => { s.className = idx < val ? 'fas fa-star cursor-pointer hover:text-yellow-400 text-yellow-400' : 'far fa-star cursor-pointer hover:text-yellow-400'; }); }));
-    const fbForm = document.getElementById('feedbackForm');
-if (fbForm) {
-    fbForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('fbName').value.trim();
-        const role = document.getElementById('fbRole').value;
-        const rating = document.getElementById('fbRating').value;
-        const text = document.getElementById('fbText').value.trim();
-        
-        if (!name || rating == 0 || !text) {
-            alert('Please fill all fields and select a rating.');
-            return;
-        }
-        
-        // Get the submit button
-        const submitBtn = fbForm.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn.innerHTML;
-        
-        // Disable button and show loading spinner
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...';
-        
-        try {
-            await addFeedback(name, role, rating, text);
-            
-            // Reset form on success
-            fbForm.reset();
-            selectedRating = 0;
-            starIcons.forEach(s => s.className = 'far fa-star cursor-pointer hover:text-yellow-400');
-            document.getElementById('fbRating').value = '0';
-            
-            // Close modal
-            if (closeFeedbackBtn) closeFeedbackBtn.click();
-            
-            // Show success message (optional)
-            alert('Thank you for your feedback!');
-            
-        } catch (error) {
-            console.error('Feedback submission failed:', error);
-            alert('Something went wrong. Please try again later.');
-        } finally {
-            // Re-enable button and restore text (only if modal wasn't closed)
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
-        }
-    });
-}
-    loadFeedbacks();
 </script>
 
 </body>
